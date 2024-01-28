@@ -1,3 +1,30 @@
+- [3. Vue3核心语法](#3-vue3核心语法)
+  - [3.1.  【OptionsAPI 与 CompositionAPI】](#31--optionsapi-与-compositionapi)
+    - [Options API 的弊端](#options-api-的弊端)
+    - [Composition API 的优势](#composition-api-的优势)
+  - [3.2. 【拉开序幕的 setup】](#32-拉开序幕的-setup)
+    - [setup 概述](#setup-概述)
+    - [setup 的返回值](#setup-的返回值)
+    - [setup 与 Options API 的关系](#setup-与-options-api-的关系)
+    - [setup 语法糖](#setup-语法糖)
+  - [3.3. 【ref 创建：基本类型的响应式数据】](#33-ref-创建基本类型的响应式数据)
+  - [3.4. 【reactive 创建：对象类型的响应式数据】](#34-reactive-创建对象类型的响应式数据)
+  - [3.5. 【ref 创建：对象类型的响应式数据】](#35-ref-创建对象类型的响应式数据)
+  - [3.6. 【ref 对比 reactive】](#36-ref-对比-reactive)
+  - [3.7. 【toRefs 与 toRef】](#37-torefs-与-toref)
+  - [3.8. 【computed】](#38-computed)
+  - [3.9.【watch】](#39watch)
+    - [情况一](#情况一)
+    - [情况二](#情况二)
+    - [情况三](#情况三)
+    - [情况四](#情况四)
+    - [情况五](#情况五)
+  - [3.10. 【watchEffect】](#310-watcheffect)
+  - [3.11. 【标签的 ref 属性】](#311-标签的-ref-属性)
+  - [3.12. 【props】](#312-props)
+  - [3.13. 【生命周期】](#313-生命周期)
+  - [3.14. 【自定义hook】](#314-自定义hook)
+
 # 3. Vue3核心语法
 
 ## 3.1.  【OptionsAPI 与 CompositionAPI】
@@ -428,7 +455,7 @@ function test(){
 
 我们在`Vue3`中使用`watch`的时候，通常会遇到以下几种情况：
 
-### * 情况一
+### 情况一
 
 监视`ref`定义的【基本类型】数据：直接写数据名即可，监视的是其`value`值的改变。
 
@@ -459,7 +486,7 @@ function test(){
 </script>
 ```
 
-### * 情况二
+### 情况二
 
 监视`ref`定义的【对象类型】数据：直接写数据名，监视的是对象的【地址值】，若想监视对象内部的数据，要手动开启深度监视。
 
@@ -511,7 +538,7 @@ function test(){
 </script>
 ```
 
-### *  情况三
+### 情况三
 
 监视`reactive`定义的【对象类型】数据，且默认开启了深度监视。
 
@@ -568,7 +595,7 @@ function test(){
 </script>
 ```
 
-### * 情况四
+### 情况四
 
 监视`ref`或`reactive`定义的【对象类型】数据中的**某个属性**，注意点如下：
 
@@ -633,7 +660,7 @@ function test(){
 </script>
 ```
 
-### * 情况五
+### 情况五
 
 监视上述的多个数据
 
