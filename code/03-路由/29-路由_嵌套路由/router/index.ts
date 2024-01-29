@@ -23,7 +23,6 @@ const router = createRouter({
       component: News,
       children: [
         {
-          name: 'xiang',  // 路由命名
           path: 'detail',
           component: Detail
         }
