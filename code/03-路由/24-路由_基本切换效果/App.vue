@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <Header></Header>
+    <h2 class="title">Vue路由测试</h2>
     <!-- 导航区 -->
     <div class="navigate">
-      <RouterLink to="/home" active-class="active">首页</RouterLink>
-      <RouterLink :to="{name: 'xinwen'}" active-class="active">新闻</RouterLink>
-      <RouterLink :to="{path: '/about'}" active-class="active">关于</RouterLink>
+      <RouterLink to="/home" active-class="xiaozhupeiqi">首页</RouterLink>
+      <RouterLink to="/news" active-class="xiaozhupeiqi">新闻</RouterLink>
+      <RouterLink to="/about" active-class="xiaozhupeiqi">关于</RouterLink>
     </div>
     <!-- 展示区 -->
     <div class="main-content">
@@ -15,8 +15,7 @@
 </template>
 
 <script lang="ts" setup name="App">
-import { RouterView, RouterLink } from 'vue-router'
-import Header from './components/Header.vue'
+import { RouterView, RouterLink } from 'vue-router';
 </script>
 
 <style>
@@ -50,7 +49,7 @@ import Header from './components/Header.vue'
     font-size: 18px;
     letter-spacing: 5px;
   }
-  .navigate a.active {
+  .navigate a.xiaozhupeiqi {
     background-color: #64967E;
     color: #ffc268;
     font-weight: 900;
@@ -66,5 +65,3 @@ import Header from './components/Header.vue'
     border: 1px solid;
   }
 </style>
-
-

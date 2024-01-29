@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <Header></Header>
+    <Header/>
     <!-- 导航区 -->
     <div class="navigate">
-      <RouterLink to="/home" active-class="active">首页</RouterLink>
-      <RouterLink :to="{name: 'xinwen'}" active-class="active">新闻</RouterLink>
-      <RouterLink :to="{path: '/about'}" active-class="active">关于</RouterLink>
+      <RouterLink to="/home" active-class="xiaozhupeiqi">首页</RouterLink>
+      <RouterLink to="/news" active-class="xiaozhupeiqi">新闻</RouterLink>
+      <RouterLink to="/about" active-class="xiaozhupeiqi">关于</RouterLink>
     </div>
     <!-- 展示区 -->
     <div class="main-content">
@@ -15,23 +15,13 @@
 </template>
 
 <script lang="ts" setup name="App">
-import { RouterView, RouterLink } from 'vue-router'
-import Header from './components/Header.vue'
+  import {RouterView,RouterLink} from 'vue-router'
+  import Header from './components/Header.vue'
+
 </script>
 
 <style>
     /* App */
-  .title {
-    text-align: center;
-    word-spacing: 5px;
-    margin: 30px 0;
-    height: 70px;
-    line-height: 70px;
-    background-image: linear-gradient(45deg, gray, white);
-    border-radius: 10px;
-    box-shadow: 0 0 2px;
-    font-size: 30px;
-  }
   .navigate {
     display: flex;
     justify-content: space-around;
@@ -50,7 +40,7 @@ import Header from './components/Header.vue'
     font-size: 18px;
     letter-spacing: 5px;
   }
-  .navigate a.active {
+  .navigate a.xiaozhupeiqi {
     background-color: #64967E;
     color: #ffc268;
     font-weight: 900;
@@ -66,5 +56,3 @@ import Header from './components/Header.vue'
     border: 1px solid;
   }
 </style>
-
-
