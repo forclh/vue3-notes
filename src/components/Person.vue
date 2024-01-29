@@ -1,39 +1,22 @@
 <template>
   <div class="person">
-    <ul>
-      <li v-for="item in list" :key="item.id">
-        {{ item.name }} -- {{ item.age }}</li>
-    </ul>
+    <h2>当前求和为：{{ sum }}，放大十倍后{{ bigSum }}</h2>
+    <button @click="add">点我+1</button>
+    <hr>
+    <img v-for="(dog, index) in dogList" :src="dog" :key="index">
+    <br>
+    <button @click="getDog">再来一只小狗</button>
   </div>
 </template> 
 
 <script lang="ts" setup name="Person">
-import { type Persons } from '@/types';
-import { withDefaults } from 'vue'
 
-// 只接收list(list可能会是数字，v-for会按次数循环)
-// defineProps(['list'])
+import useSum from '@/hooks/useSum'
+import useDog from '@/hooks/useDog'
 
 
-/**
- * 只接收list加限制类型
- * 1. defineProps可以传泛型，由于可能有多个值，所以传入一个对象
- */
-// defineProps<{ list: Persons }>()
-
-/**
- * 接受list + 限制类型 + 限制必要性 + 指定默认值
- * 1. ? 表示父组件传递的值可有可无(限制必要性)
- * 2. 使用 withDefaults 来指定默认值
- * 3. 默认值要通过函数返回
- */
-withDefaults(defineProps<{ list?: Persons }>(), {
-  list: () => [{ id: 'adfafadf01', name: 'AK', age: 23 }]
-})
-
-// 接受list，同时保存起来
-// let x =  defineProps(['list'])
-// console.log(x.list)
+const {sum, add, bigSum} = useSum()
+const {dogList, getDog} = useDog()
 
 </script>
 
@@ -51,6 +34,11 @@ button {
 
 li {
   font-size: 20px;
+}
+
+img {
+  height: 100px;
+  margin-right: 10px;
 }
 </style>
 
