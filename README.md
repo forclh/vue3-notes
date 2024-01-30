@@ -4,7 +4,7 @@
 
 |                           视频教程                           |   官方资料   |                    其他笔记                    |
 | :----------------------------------------------------------: | :----------: | :--------------------------------------------: |
-| [尚硅谷Vue3入门到实战，最新版vue3+TypeScript前端开发教程](https://www.bilibili.com/video/BV1Za4y1r7KE) | [百度网盘]() | [笔记汇总](https://github.com/forclh/AllNotes) |
+| [尚硅谷Vue3入门到实战，最新版vue3+TypeScript前端开发教程](https://www.bilibili.com/video/BV1Za4y1r7KE) | [百度网盘](https://pan.baidu.com/s/1B8M4kBUtFC_LrL_oibGWeA?pwd=77vv ) | [笔记汇总](https://github.com/forclh/AllNotes) |
 
 ## 教程笔记内容
 
@@ -13,8 +13,8 @@
 | [01-Vue3概述与创建工程](./code/02-Vue3核心语法/Vue3核心语法.md) | 2024/1/26 |
 | [02-Vue3核心语法](./code/02-Vue3核心语法/Vue3核心语法.md)       | 2024/1/29 |
 | [03-路由](./code/03-路由/路由.md)               | 2024/1/30 |
-| [04-Pinia]()              |           |
+| [04-Pinia](./code//04-Pinia/Pinia.md)              | 2024/1/30      |
 | [05-组件通信]()           |           |
 | [06-其他API]()            |           |
-| [07-Vue3新组件]()         |           |
+| [07-Vue3新组件]()         |  |
 
