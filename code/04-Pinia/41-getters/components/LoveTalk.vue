@@ -14,12 +14,6 @@ import { storeToRefs } from 'pinia'
 const talkStore = useTalksStore()
 const { talkList } = storeToRefs(talkStore)
 
-// $subscribe() 类似watch
-talkStore.$subscribe((mutated, state) => {
-  console.log('tallkStore中的数据发生了变化', mutated, state)
-  localStorage.setItem('talkList', JSON.stringify(state.talkList))
-})
-
 // 方法
 async function getLoveTalk() {
   talkStore.getATalk()
