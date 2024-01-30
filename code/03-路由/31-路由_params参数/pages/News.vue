@@ -2,13 +2,16 @@
   <div class="news">
     <!-- 导航区 -->
     <ul>
-      <li v-for="news in newsList" :key="news.id">
-        <button @click="showNewsDetail(news)">查看新闻</button>
+      <li v-for="{ id, content, title } in newsList" :key="id">
+        <!-- 第一种写法 -->
+        <!-- <RouterLink :to="`/news/detail/${id}/${title}/${content}`">{{ title }}</RouterLink> -->
+        <!-- 第二种写法 -->
         <RouterLink :to="{
-          name: 'xiang',
-          query: { id: news.id, title: news.title, content: news.content }
+          // path: '/news/detail',
+          name: 'xiang',   // 这种params传参只能用name路由
+          params: { id, title, content }
         }">
-          {{ news.title }}
+          {{ title }}
         </RouterLink>
       </li>
     </ul>
@@ -21,15 +24,6 @@
 
 <script setup lang="ts" name="News">
 import { reactive } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-interface NewsInter {
-  id: string,
-  title: string,
-  content: string
-}
 
 let newsList = reactive([
   { id: 'ldfjafljdaj01', title: '很好的抗癌食物', content: '西兰花' },
@@ -37,14 +31,6 @@ let newsList = reactive([
   { id: 'ldfjafljdaj03', title: '震惊！万万没想到', content: '明天是周一' },
   { id: 'ldfjafljdaj04', title: '好消息！好消息！', content: '马上要过年了' },
 ])
-
-function showNewsDetail(news: NewsInter) {
-  // push replace 参数写法与<RouterLink>中的to相同
-  router.push({
-    name: 'xiang',
-    query: { id: news.id, title: news.title, content: news.content }
-  })
-}
 </script>
 
 <style scoped>
