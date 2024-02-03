@@ -3,7 +3,7 @@
     <h1>当水温达到60℃或水位达到80cm时，给服务器发送请求</h1>
     <h2>当前水温为：{{ temp }}℃</h2>
     <h2>当前水位为：{{ height }}cm</h2>
-    <button @click="changetemp">增加水温</button>
+    <button @click="changeTemp">增加水温</button>
     <button @click="changeHeight">增加水位</button>
   </div>
 </template> 
@@ -15,9 +15,9 @@ import { ref, watch, watchEffect } from 'vue'
 // 数据
 let temp = ref(10)
 let height = ref(0)
-// 方法
 
-function changetemp() {
+// 方法
+function changeTemp() {
   temp.value += 10
 }
 function changeHeight() {

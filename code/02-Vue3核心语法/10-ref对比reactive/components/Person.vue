@@ -30,10 +30,9 @@ function changeCar() {
   // reactive的缺点
   // car = { brand: '法拉利', price: 500 }
   // car = reactive({ brand: '法拉利', price: 500 })
-  // 以上两张方法都失去了响应式数据，可以使用Object.assign()方法实现
+  // 以上两种方法都失去了响应式，可以使用Object.assign()方法实现
+//  Object.assign(car, { brand: '法拉利', price: 500 })
 
-
-  // Object.assign(car, { brand: '法拉利', price: 500 })
   // ref可以直接赋值对象更新
   car.value = { brand: '法拉利', price: 500 }
 }

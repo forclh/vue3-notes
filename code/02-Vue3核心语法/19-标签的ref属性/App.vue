@@ -13,10 +13,10 @@ import { ref } from 'vue'
 
 let title2 = ref(0)
 let ren = ref()
-
 function showLog() {
-  // console.log(title2.value)
+  // console.log(title2.value)  // 
   console.log(ren.value)  // 打印Person组件的实例
 }
+
 
 </script>

@@ -17,11 +17,11 @@ function add() {
 }
 
 // 创建（当前setup函数）
-console.log('创建')
+console.log('子：创建')
 
 // 挂载前
 onBeforeMount(() => {
-  console.log('挂载前')
+  console.log('子：挂载前')
 })
 // 挂载完毕
 onMounted(() => {
@@ -29,19 +29,19 @@ onMounted(() => {
 })
 // 更新前
 onBeforeUpdate(() => {
-  console.log('更新前')
+  console.log('子：更新前')
 })
 // 更新完毕
 onUpdated(() => {
-  console.log('更新完毕')
+  console.log('子：更新完毕')
 })
 // 卸载前
 onBeforeUnmount(() => {
-  console.log('卸载前')
+  console.log('子：卸载前')
 }),
 // 卸载后
 onUnmounted(() => {
-  console.log('卸载后')
+  console.log('子：卸载后')
 })
 
 </script>

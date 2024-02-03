@@ -67,4 +67,5 @@ import { RouterView, RouterLink } from 'vue-router'
   width: 90%;
   height: 400px;
   border: 1px solid;
-}</style>
+}
+</style>

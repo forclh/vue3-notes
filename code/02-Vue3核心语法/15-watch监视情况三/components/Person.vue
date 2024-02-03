@@ -43,7 +43,7 @@ function test() {
   obj.a.b.c = 888;
 }
 
-// 监视，情况三：监视【reactive】定义的【对象类型数据】，默认开始深度监视(隐式的开始深层监听，不可关闭)
+// 监视，情况三：监视【reactive】定义的【对象类型数据】，默认开始深度监视(隐式的开启深层监听，不可关闭)
 watch(person, (newValue, oldValue) => {
   console.log('person变化了', newValue, oldValue)
 })

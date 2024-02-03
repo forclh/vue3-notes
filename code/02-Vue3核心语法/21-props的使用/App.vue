@@ -7,7 +7,8 @@
 <script lang="ts" setup name="App">
 import Person from './components/Person.vue'
 import { type Persons } from '@/types'
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
+
 
 let personList = reactive<Persons>([
   { id: 'addaf01', name: 'AK', age: 23 },

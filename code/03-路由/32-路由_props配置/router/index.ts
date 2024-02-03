@@ -31,9 +31,9 @@ const router = createRouter({
           // props: true,  // 路由props, 这句话使得 <Detail/> -> <Detail id=?? title=?? content=??/>
 
           // 写法二：函数写法：可以自己决定将什么作为props给路由组件(适合query方式)
-          props(route) {
-            return route.query
-          }
+          // props(route) {
+          //   return route.query
+          // }
           // props(route) {
           //   return { x: 100, y: 200, z: 300 }
           // }

@@ -10,26 +10,26 @@
 </template>
 
 <script lang="ts" setup name="Person">
-import {ref} from 'vue' 
+import { ref } from 'vue'
 
 let name = ref("AK");  // ref定义基本类型的响应式数据
-let age = ref(23);
-let tel = "15666666666";
-let address = '北京市朝阳区';
+let age = ref(23)
+let tel = "15666666666"
+let address = '北京市朝阳区'
 
 console.log(name)
 console.log(tel)
 
 // 方法
 function changeName() {
-  name.value = "A--K";
-  console.log(name.value);
+  name.value = "A--K"
+  console.log(name.value)
 }
 function changeAge() {
-  age.value += 1;
+  age.value += 1
 }
 function showTel() {
-  alert(tel);
+  alert(tel)
 }
 </script>
 

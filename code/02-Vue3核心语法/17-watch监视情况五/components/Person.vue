@@ -44,7 +44,7 @@ function changeCar() {
 
 // 情况五：监视多个数据
 watch([() => person.name, person.car], (newValue, oldValue) => {
-  console.log('person.car变化了', newValue, oldValue)
+  console.log('person变化了', newValue, oldValue)
 }, { deep: true })
 
 

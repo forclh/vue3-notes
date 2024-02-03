@@ -40,7 +40,6 @@ function changeSecondCar() {
 
 function changeCar() {
   person.car = { c1: '凯迪拉克', c2: '特斯拉' }
-  // Object.assign(person.car, { c1: '凯迪拉克', c2: '特斯拉' })
 }
 // 情况四：监视响应式对象里的某个属性
 // 1. 该属性为基本类型时：要写成函数的形式（watch监视了一个getter函数（返回一个值的函数））
